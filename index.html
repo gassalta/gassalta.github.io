@@ -1,0 +1,80 @@
+* Desactivar Telemetria
+Abrir Servicios (win + r = services.msc) y inhabilitar y desactivar
+ - DiagTrack = Experiencias del usuario y telemetría asociadas
+- dmwappushservice = Servicio de enrutamiento de mensajes de irsecion
+
+Agregar un registro en Editor de Registro:
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection
+El tipo de registro nuevo es DWORD 32BITS, con nombre "Allow Telemetry", valor 0
+
+Abrir en ejecturar, el Editor de directivas de grupo local = gpedit.msc
+Plantillas administrativas > Componentes de windows > Recopilacion de datos
+- Abrir "Permitir teletemria" y la habilitamos, y marcamos en 0
+
+Programador de tareas:
+Biblioteca del programador > Microsoft > Windows > Aplication experience
+- Se desactiva todo
+Biblioteca del programador > Microsoft > Windows > Customer Experience
+
+** DESACTIVAR SERVICIOS INECESARIOS
+- Administración de autenticación de Xbox Live
+- Xbox Accessory Management Service
+- Servicio de red de Xbox Live
+- Administrador de mapas descargados
+- Control parental (Si no se tiene niños)
+- Cola de impresion (Si no se tiene impresora)
+- Fax 
+- Registro remoto
+- Servicio AVCTP (Si no se tiene auriculares inalambricos bluetooth)
+- Servicio biométrico de Windows (Si no se tiene huella digital)
+- Servicio de compatibilidad con Bluetooth (Si no se tiene bluetooth)
+- Servicio de geolocalización
+- Servicio de Panel de escritura a mano y teclado táctil (Si no se posee estos dispositivos)
+- Servicio de puerta de enlace de audio de Bluetooth (Si no se posee)
+- Servicio de Windows Insider
+- Servicio FrameServer de la Cámara de Windows (Si no se posee camara)
+- Servicio Informe de errores de Windows
+- Windows Update (Opcional)
+- Windows Search
+-- Administrador de pagos NFC (Si no se utiliza)
+- Agente de conexion de red (Relacionado al appstore)
+- Datos de contacto
+- Diagnostico execution service
+- Directiva de extracion de tarjetas inteligentes
+- Hora de red de telefonia movil (Esta relacionado al compartir datos con el telefono)
+- Host de servicio de diagnostico
+- Host de sistema de diagnostico
+- Microsoft EDGE (Si no se utiliza el edge)
+- Onedrive update services
+- Partida guardada de xbox live
+- PrintWorkflow (Si no se utiliza impresora)
+- Propagacion de certificados
+- Servicio de directivas de diagnostico
+- Servicio de enumeracion de dispositivos de tarjetas inteligentes
+- Servicio de implementacion de appx (Si no se utiliza el appstore)
+- Servicio de instalacion microsoft store
+* Todos los relacionados a Hiper-V (Si no se utiliza virtualbox)
+- Servicio de prueba comercial
+- Servicio pus toinstall de windows (Relacionado al appstore)
+- Servicio telefonico
+- Servicio volumetric audio compositor
+- Sincronizar host (Si no se usan las app de correo contactos etc)
+- Tarjeta inteligente
+- Telefonia
+- Ubicacion de llamada remoto
+- Walletservice
+** LIMPIAR UN POCO EL SISTEMA
+En cmd colocar: sfc /scannow
+
+** DESACTIVAR CONFIGURACIONES
+Desactivar todas las opciones
+- Juegos
+- Privacidad -> General
+- Privacidad -> Voz
+- Privacidad -> Entrada y escritura
+- Privacidad -> Comentarios y diagnosticos
+- Privacidad -> Historial de actividad
+- Privacidad -> Ubicacion
+- Privacidad -> Activacion por voz (Corresponde a cortana)
+- Privacidad -> Informacion de la cuenta
+- Privacidad -> Contactos, Calendario, Llamadas, Historial de llamadas, Correo, Tareas, Mensajeria, Señales de radio, Aplicaciones en segundo plano, Diagnosticos de aplicacion
